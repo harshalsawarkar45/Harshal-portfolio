@@ -1,175 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Harshal Sawarkar | Data Analyst Portfolio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
+<meta charset="UTF-8">
+<title>Harshal Sawarkar | Data Analyst Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        body {
-            background-color: #f4f6f9;
-            color: #333;
-        }
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
 
-        header {
-            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-            color: white;
-            padding: 40px 20px;
-            text-align: center;
-        }
+html{
+scroll-behavior:smooth;
+}
 
-        header h1 {
-            font-size: 40px;
-            margin-bottom: 10px;
-        }
+body{
+background:#f4f6f9;
+color:#333;
+}
 
-        header p {
-            font-size: 18px;
-        }
+/* Header */
+header{
+background:linear-gradient(135deg,#141e30,#243b55);
+color:white;
+padding:35px 20px;
+text-align:center;
+}
 
-        section {
-            padding: 40px 10%;
-        }
+header h1{
+font-size:36px;
+margin-bottom:6px;
+}
 
-        h2 {
-            margin-bottom: 20px;
-            color: #2c5364;
-            border-bottom: 3px solid #2c5364;
-            display: inline-block;
-            padding-bottom: 5px;
-        }
+header p{
+font-size:15px;
+}
 
-        .card {
-            background: white;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
+.contact{
+margin-top:8px;
+}
 
-        ul {
-            margin-left: 20px;
-            margin-top: 10px;
-        }
+.contact p{
+margin:2px 0;
+}
 
-        footer {
-            text-align: center;
-            background: #2c5364;
-            color: white;
-            padding: 20px;
-            margin-top: 20px;
-        }
+.contact a{
+color:white;
+text-decoration:none;
+}
 
-        .contact {
-            margin-top: 15px;
-        }
+.contact a:hover{
+text-decoration:underline;
+}
 
-        .btn {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 10px 20px;
-            background: #2c5364;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-        }
+/* Navbar */
+nav{
+background:#1e3c4d;
+padding:10px;
+text-align:center;
+}
 
-        .btn:hover {
-            background: #1e3c4d;
-        }
-    </style>
+nav ul{
+list-style:none;
+}
+
+nav ul li{
+display:inline-block;
+margin:0 12px;
+}
+
+nav ul li a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+font-size:14px;
+transition:0.3s;
+}
+
+nav ul li a:hover{
+color:#00d4ff;
+}
+
+/* Sections – SPACE REDUCED HERE */
+section{
+padding:20px 10%;
+}
+
+/* Heading */
+h2{
+margin-bottom:10px;
+color:#2c5364;
+border-bottom:2px solid #2c5364;
+display:inline-block;
+padding-bottom:2px;
+}
+
+/* Card */
+.card{
+background:white;
+padding:12px;
+margin-bottom:10px;
+border-radius:6px;
+box-shadow:0 3px 10px rgba(0,0,0,0.08);
+}
+
+ul{
+margin-left:16px;
+margin-top:6px;
+}
+
+/* Footer */
+footer{
+text-align:center;
+background:#2c5364;
+color:white;
+padding:15px;
+margin-top:10px;
+}
+
+/* Responsive */
+@media(max-width:768px){
+nav ul li{
+display:block;
+margin:6px 0;
+}
+section{
+padding:15px 5%;
+}
+}
+</style>
 </head>
 
 <body>
 
 <header>
-    <h1>Harshal Sawarkar</h1>
-    <p>Data Analyst | Machine Learning Enthusiast</p>
-    <div class="contact">
-        <p>📞 9623126291</p>
-        <p>📧 harshalsawarkar06@gmail.com</p>
-    </div>
+<h1>Harshal Sawarkar</h1>
+<p>Data Analyst | Machine Learning Enthusiast</p>
+<div class="contact">
+<p>📞 <a href="tel:9623126291">9623126291</a></p>
+<p>📧 <a href="mailto:harshalsawarkar06@gmail.com">harshalsawarkar06@gmail.com</a></p>
+</div>
 </header>
+
 <nav>
-  <ul>
-    <li><a href="#summary">About</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#projects">Projects</a></li>
-  </ul>
+<ul>
+<li><a href="#summary">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+</ul>
 </nav>
 
 <section id="summary">
-    <h2>Professional Summary</h2>
-    <div class="card">
-        <p>
-            Passionate about transforming data into meaningful insights that support smarter decision-making.
-            Currently pursuing BE in Computer Science & Engineering with strong skills in data analysis,
-            machine learning, visualization, and statistical techniques.
-        </p>
-    </div>
+<h2>Professional Summary</h2>
+<div class="card">
+<p>
+Passionate about transforming data into meaningful insights that support smarter decision-making.
+Currently pursuing BE in Computer Science & Engineering with strong skills in data analysis,
+machine learning, visualization, and statistical techniques.
+</p>
+</div>
 </section>
 
 <section>
-    <h2>Education</h2>
-    <div class="card">
-        <h3>BE in Computer Science & Engineering</h3>
-        <p>Sant Gadge Baba Amravati University (2022 – 2026)</p>
-    </div>
+<h2>Education</h2>
+<div class="card">
+<h3>BE in Computer Science & Engineering</h3>
+<p>Sant Gadge Baba Amravati University (2022 – 2026)</p>
+</div>
 </section>
 
 <section id="skills">
-    <h2>Skills</h2>
-    <div class="card">
-        <p><strong>Programming:</strong> Python, SQL, Excel</p>
-        <p><strong>Libraries:</strong> NumPy, Pandas, Matplotlib, Scikit-learn</p>
-        <p><strong>Data & Visualization:</strong> EDA, Feature Engineering, Machine Learning, Power BI, Tableau</p>
-    </div>
+<h2>Skills</h2>
+<div class="card">
+<p><strong>Programming:</strong> Python, SQL, Excel</p>
+<p><strong>Libraries:</strong> NumPy, Pandas, Matplotlib, Scikit-learn</p>
+<p><strong>Data & Visualization:</strong> EDA, Feature Engineering, Machine Learning, Power BI, Tableau</p>
+</div>
 </section>
 
 <section id="projects">
-    <h2>Projects</h2>
+<h2>Projects</h2>
 
-    <div class="card">
-        <h3>Analysis of Student Engagement Behaviour</h3>
-        <ul>
-            <li>Analyzed classroom engagement data to identify learning behavior patterns.</li>
-            <li>Performed data preprocessing, EDA, and visualization.</li>
-            <li>Identified key factors influencing academic performance.</li>
-        </ul>
-        <p><strong>Tools:</strong> Python, Pandas, NumPy, Matplotlib</p>
-    </div>
+<div class="card">
+<h3>Analysis of Student Engagement Behaviour</h3>
+<ul>
+<li>Analyzed classroom engagement data to identify learning behavior patterns.</li>
+<li>Performed data preprocessing, EDA, and visualization.</li>
+<li>Identified key factors influencing academic performance.</li>
+</ul>
+<p><strong>Tools:</strong> Python, Pandas, NumPy, Matplotlib</p>
+</div>
 
-    <div class="card">
-        <h3>AI-Powered Predictive Analytics in Healthcare</h3>
-        <ul>
-            <li>Built ML models to predict patient outcomes.</li>
-            <li>Applied feature selection and model evaluation techniques.</li>
-            <li>Supported proactive healthcare decisions.</li>
-        </ul>
-        <p><strong>Tools:</strong> Python, Machine Learning, Statistics</p>
-    </div>
+<div class="card">
+<h3>AI-Powered Predictive Analytics in Healthcare</h3>
+<ul>
+<li>Built ML models to predict patient outcomes.</li>
+<li>Applied feature selection and model evaluation techniques.</li>
+<li>Supported proactive healthcare decisions.</li>
+</ul>
+<p><strong>Tools:</strong> Python, Machine Learning, Statistics</p>
+</div>
+
 </section>
 
 <section>
-    <h2>Certificates</h2>
-    <div class="card">
-        <ul>
-            <li>The Ultimate Job Ready Data Science Course – Simplilearn & Microsoft (2025)</li>
-            <li>Data Science Course – Code With Harry (2025)</li>
-        </ul>
-    </div>
+<h2>Certificates</h2>
+<div class="card">
+<ul>
+<li>The Ultimate Job Ready Data Science Course – Simplilearn & Microsoft (2025)</li>
+<li>Data Science Course – Code With Harry (2025)</li>
+</ul>
+</div>
 </section>
 
 <footer>
-    <p>© 2025 Harshal Sawarkar | Portfolio Website</p>
+<p>© 2025 Harshal Sawarkar | Portfolio Website</p>
 </footer>
 
 </body>
-</html>
+</html
+
