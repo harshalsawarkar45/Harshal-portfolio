@@ -2,133 +2,236 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Harshal Sawarkar | Data Analyst Portfolio</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Harshal Sawarkar | Data Analyst</title>
 
 <style>
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial,sans-serif;
-}
-
-html{
+font-family:Arial, sans-serif;
 scroll-behavior:smooth;
 }
 
 body{
-background:#f4f6f9;
-color:#333;
-}
-
-/* Header */
-header{
-background:linear-gradient(135deg,#141e30,#243b55);
 color:white;
-padding:35px 20px;
-text-align:center;
+background:black;
+overflow-x:hidden;
 }
 
-header h1{
-font-size:36px;
-margin-bottom:6px;
+/* Moving Stars Background */
+body::before{
+content:"";
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:200%;
+background:url("https://www.transparenttextures.com/patterns/stardust.png");
+animation:starsMove 80s linear infinite;
+z-index:-1;
+opacity:0.4;
 }
 
-header p{
-font-size:15px;
-}
-
-.contact{
-margin-top:8px;
-}
-
-.contact p{
-margin:2px 0;
-}
-
-.contact a{
-color:white;
-text-decoration:none;
-}
-
-.contact a:hover{
-text-decoration:underline;
+@keyframes starsMove{
+from{transform:translateY(0);}
+to{transform:translateY(-1000px);}
 }
 
 /* Navbar */
 nav{
-background:#1e3c4d;
+position:fixed;
+width:100%;
+top:0;
+background:rgba(0,0,0,0.8);
 padding:10px;
 text-align:center;
+backdrop-filter:blur(10px);
+z-index:1000;
 }
 
-nav ul{
-list-style:none;
-}
-
-nav ul li{
-display:inline-block;
-margin:0 12px;
-}
-
-nav ul li a{
+nav a{
 color:white;
+margin:0 12px;
 text-decoration:none;
 font-weight:bold;
 font-size:14px;
-transition:0.3s;
 }
 
-nav ul li a:hover{
+nav a:hover{
 color:#00d4ff;
 }
 
-/* Sections – SPACE REDUCED HERE */
-section{
-padding:20px 10%;
+/* Hero */
+header{
+height:90vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding-top:60px;
 }
 
-/* Heading */
-h2{
-margin-bottom:10px;
-color:#2c5364;
-border-bottom:2px solid #2c5364;
+.profile-pic{
+width:200px;
+height:200px;
+border-radius:50%;
+object-fit:cover;
+margin-bottom:12px;
+border:3px solid #00d4ff;
+box-shadow:0 0 15px #00d4ff;
+}
+
+header h1{
+font-size:34px;
+margin-top:8px;
+}
+
+header p{
+font-size:16px;
+margin-top:6px;
+opacity:0.8;
+}
+
+/* Button */
+.btn{
+margin-top:15px;
 display:inline-block;
-padding-bottom:2px;
+padding:8px 22px;
+background:#00d4ff;
+color:black;
+text-decoration:none;
+border-radius:25px;
+font-weight:bold;
+transition:0.3s;
+cursor:pointer;
+font-size:14px;
+}
+
+.btn:hover{
+background:white;
+}
+
+/* Sections */
+section{
+padding:45px 10%;
+}
+
+h2{
+margin-bottom:18px;
+font-size:24px;
+text-align:center;
 }
 
 /* Card */
 .card{
-background:white;
-padding:12px;
-margin-bottom:10px;
-border-radius:6px;
-box-shadow:0 3px 10px rgba(0,0,0,0.08);
+background:rgba(255,255,255,0.07);
+padding:18px;
+border-radius:12px;
+backdrop-filter:blur(10px);
+box-shadow:0 6px 20px rgba(0,0,0,0.3);
+margin-bottom:20px;
+transition:0.3s;
 }
 
-ul{
-margin-left:16px;
-margin-top:6px;
+.card:hover{
+transform:translateY(-5px);
+}
+
+/* Skills */
+.skills-container{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.skill-box{
+flex:1;
+min-width:230px;
 }
 
 /* Footer */
 footer{
 text-align:center;
-background:#2c5364;
-color:white;
-padding:15px;
-margin-top:10px;
+padding:12px;
+background:rgba(0,0,0,0.8);
+font-size:13px;
 }
 
-/* Responsive */
-@media(max-width:768px){
-nav ul li{
-display:block;
-margin:6px 0;
+/* Modal Styles */
+.modal{
+display:none;
+position:fixed;
+z-index:2000;
+left:0;
+top:0;
+width:100%;
+height:100%;
+overflow:auto;
+background-color: rgba(0,0,0,0.85);
 }
-section{
-padding:15px 5%;
+
+.modal-content{
+background-color: rgba(20,20,20,0.95);
+margin:10% auto;
+padding:20px;
+border-radius:12px;
+width:90%;
+max-width:600px;
+color:white;
+position:relative;
+box-shadow:0 6px 25px rgba(0,0,0,0.5);
+animation:fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn{
+from{opacity:0; transform:translateY(-20px);}
+to{opacity:1; transform:translateY(0);}
+}
+
+.close{
+color:#00d4ff;
+position:absolute;
+top:10px;
+right:15px;
+font-size:24px;
+font-weight:bold;
+cursor:pointer;
+}
+
+.close:hover{
+color:white;
+}
+
+.modal h3{
+margin-bottom:12px;
+text-align:center;
+}
+
+.modal p{
+margin-bottom:10px;
+line-height:1.5;
+font-size:15px;
+}
+
+.modal ul{
+list-style:circle;
+margin-left:20px;
+margin-bottom:10px;
+}
+
+@media(max-width:768px){
+.skills-container{
+flex-direction:column;
+}
+header h1{
+font-size:26px;
+}
+.modal-content{
+margin-top:20%;
+padding:15px;
 }
 }
 </style>
@@ -136,90 +239,122 @@ padding:15px 5%;
 
 <body>
 
-<header>
-<h1>Harshal Sawarkar</h1>
-<p>Data Analyst | Machine Learning Enthusiast</p>
-<div class="contact">
-<p>📞 <a href="tel:9623126291">9623126291</a></p>
-<p>📧 <a href="mailto:harshalsawarkar06@gmail.com">harshalsawarkar06@gmail.com</a></p>
-</div>
-</header>
-
 <nav>
-<ul>
-<li><a href="#summary">About</a></li>
-<li><a href="#skills">Skills</a></li>
-<li><a href="#projects">Projects</a></li>
-</ul>
+<a href="#">Home</a>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
 </nav>
 
-<section id="summary">
-<h2>Professional Summary</h2>
+<header>
+<img src="harshal.jpg" class="profile-pic" alt="Harshal Photo">
+<h1>Harshal Sawarkar</h1>
+<p>Data Analyst | Machine Learning Enthusiast</p>
+<a href="#projects" class="btn">View My Work</a>
+</header>
+
+<section id="about">
+<h2>About Me</h2>
 <div class="card">
 <p>
-Passionate about transforming data into meaningful insights that support smarter decision-making.
-Currently pursuing BE in Computer Science & Engineering with strong skills in data analysis,
-machine learning, visualization, and statistical techniques.
+I am a passionate Data Analyst with hands-on experience in Python, SQL, Machine Learning, and Data Visualization.
+I specialize in Exploratory Data Analysis (EDA), feature engineering, predictive modeling, and building data-driven insights.
 </p>
 </div>
 </section>
 
-<section>
-<h2>Education</h2>
-<div class="card">
-<h3>BE in Computer Science & Engineering</h3>
-<p>Sant Gadge Baba Amravati University (2022 – 2026)</p>
-</div>
-</section>
-
 <section id="skills">
-<h2>Skills</h2>
-<div class="card">
-<p><strong>Programming:</strong> Python, SQL, Excel</p>
-<p><strong>Libraries:</strong> NumPy, Pandas, Matplotlib, Scikit-learn</p>
-<p><strong>Data & Visualization:</strong> EDA, Feature Engineering, Machine Learning, Power BI, Tableau</p>
+<h2>My Skills</h2>
+<div class="skills-container">
+
+<div class="card skill-box">
+<h3>Data Analysis</h3>
+<p>✔ Python</p>
+<p>✔ Pandas & NumPy</p>
+<p>✔ Excel & SQL</p>
+<p>✔ Data Cleaning & EDA</p>
+</div>
+
+<div class="card skill-box">
+<h3>Machine Learning & BI</h3>
+<p>✔ Scikit-Learn</p>
+<p>✔ Feature Engineering</p>
+<p>✔ Model Evaluation</p>
+<p>✔ Power BI & Data Visualization</p>
+</div>
+
 </div>
 </section>
 
 <section id="projects">
-<h2>Projects</h2>
+<h2>My Projects</h2>
 
 <div class="card">
-<h3>Analysis of Student Engagement Behaviour</h3>
-<ul>
-<li>Analyzed classroom engagement data to identify learning behavior patterns.</li>
-<li>Performed data preprocessing, EDA, and visualization.</li>
-<li>Identified key factors influencing academic performance.</li>
-</ul>
-<p><strong>Tools:</strong> Python, Pandas, NumPy, Matplotlib</p>
+<h3>Student Engagement Behaviour Analysis</h3>
+<p>
+Analyzed student classroom behavior and engagement metrics to improve academic performance.
+</p>
+<p><strong>Technologies:</strong> Python, Pandas, NumPy, Matplotlib</p>
+<a onclick="openModal('Student Engagement Behaviour Analysis','Performed complete data cleaning, exploratory data analysis, and visualization. Built interactive dashboards to track student engagement and academic performance. Key insights included participation patterns, attention metrics, and trends over time. Enabled teachers to make data-driven interventions and improve learning outcomes.')" class="btn">View Details</a>
 </div>
 
 <div class="card">
-<h3>AI-Powered Predictive Analytics in Healthcare</h3>
-<ul>
-<li>Built ML models to predict patient outcomes.</li>
-<li>Applied feature selection and model evaluation techniques.</li>
-<li>Supported proactive healthcare decisions.</li>
-</ul>
-<p><strong>Tools:</strong> Python, Machine Learning, Statistics</p>
+<h3>AI-Powered Healthcare Prediction</h3>
+<p>
+Developed predictive ML models to forecast patient health outcomes and improve healthcare decisions.
+</p>
+<p><strong>Technologies:</strong> Python, Scikit-Learn, Statistics</p>
+<a onclick="openModal('AI-Powered Healthcare Prediction','Built machine learning pipelines, applied feature engineering, and optimized model performance using cross-validation and evaluation metrics. Created predictive dashboards to assist medical professionals in decision-making and risk assessment. Ensured data preprocessing, handling missing values, and applied feature selection techniques for best model accuracy.')" class="btn">View Details</a>
 </div>
 
 </section>
 
-<section>
-<h2>Certificates</h2>
+<section id="contact">
+<h2>Contact Me</h2>
 <div class="card">
-<ul>
-<li>The Ultimate Job Ready Data Science Course – Simplilearn & Microsoft (2025)</li>
-<li>Data Science Course – Code With Harry (2025)</li>
-</ul>
+<p>Email: harshalsawarkar06@gmail.com</p>
+<p style="margin-top:6px;">Phone: 9623126291</p>
+<a href="Harshal_Resume.pdf" download class="btn">Download Resume</a>
 </div>
 </section>
 
 <footer>
-<p>© 2025 Harshal Sawarkar | Portfolio Website</p>
+© 2026 Harshal Sawarkar | Portfolio Website
 </footer>
+
+<!-- Modal -->
+<div id="projectModal" class="modal">
+<div class="modal-content">
+<span class="close" onclick="closeModal()">&times;</span>
+<h3 id="modalTitle"></h3>
+<p id="modalDescription"></p>
+</div>
+</div>
+
+<script>
+function openModal(title, description){
+document.getElementById('modalTitle').innerText = title;
+document.getElementById('modalDescription').innerText = description;
+document.getElementById('projectModal').style.display = 'block';
+}
+
+function closeModal(){
+document.getElementById('projectModal').style.display = 'none';
+}
+
+// Close modal if clicked outside content
+window.onclick = function(event){
+if(event.target == document.getElementById('projectModal')){
+closeModal();
+}
+}
+</script>
+
+</body>
+</html>
 
 </body>
 </html
+
 
